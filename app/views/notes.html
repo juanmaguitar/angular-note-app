@@ -5,10 +5,10 @@
     <a class="button" ng-hide="deleting" href="#/new"> + </a>
 </header>
 <section class="content">
-	<input type="search" placeholder="Search" ng-model='query'>
+	<p><input type="search" placeholder="Search" ng-model='query'></p>
 	<ul class="list">
 		<li ng-repeat="note in notes | filter:query">
-		    <a href="#/note/{{note._id}}" > 
+		    <a href="#/note/{{note._id}}" >
 		    	<strong>{{ note.title}}</strong>
 		    	<span class="chevron" ng-hide="deleting"></span>
 				<a class="button-negative" ng-click="delete(note)" ng-show="deleting">Delete</a>
@@ -17,6 +17,5 @@
 		    <br>
 		    {{note.date | moment}}
 		</li>
-	</ul>	
+	</ul>
 </section>
-	
